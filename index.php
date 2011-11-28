@@ -1,15 +1,6 @@
 <html>
 <body>
 
-<form method="post" action="<?php echo $PHP_SELF;?>">
-
-Get Quote: <input type="text" size="10" maxlength="10" name="stockVar"/>
-
-<input type="submit" value="Get Quote" name="get_quote"/>
-</form>
-
-<br><br>
-
 <?php
 
 $stockVar = "Quote Variable";
@@ -32,8 +23,14 @@ echo "Quote is $quote";
 
 ?>
 
+<br><br>
 
+<form method="post" action="<?php echo $PHP_SELF;?>">
 
+Get Quote: <input type="text" size="10" maxlength="10" name="stockVar"/>
+
+<input type="submit" value="Get Quote" name="get_quote"/>
+</form>
 
 </body>
 </html>
