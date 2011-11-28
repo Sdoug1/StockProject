@@ -22,7 +22,7 @@ $stockVar = $_POST['stockVar'];
 $open = fopen("http://download.finance.yahoo.com/d/quotes.csv?s=" . $stockVar . "&f=sl1d1t1c1ohgv&e=.csv", "r");
 $quote = fread($open, 2000);
 fclose($open);
-$quote = str_replace("\"", "", $quote);
+$quote = str_replace("\"", """, $quote);
 $quote = explode(",", $quote);
 $quote = ($quote[1]);
 
