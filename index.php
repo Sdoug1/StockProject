@@ -1,3 +1,6 @@
+<html>
+<body>
+
 <?phpfunction curl($url){    $ch = curl_init();    curl_setopt($ch,
 CURLOPT_URL,$url);    curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
 return curl_exec($ch);    curl_close ($ch);}
@@ -13,3 +16,17 @@ Trade</th><th>52 Week Low</th><th>52 Week
 High</th><th>Open</th><th>Previous
 Close</th></tr><tr><?phpforeach($stocks as $val){echo
 '<td>'.$val.'</td>';}?></tr></table>
+
+
+
+<br><br>
+
+<form method="post" action="<?php echo $PHP_SELF;?>">
+
+Get Quote: <input type="text" size="10" maxlength="10" name="symbol"/>
+
+<input type="submit" value="Get Quote" name="quote"/>
+</form>
+
+</body>
+</html>
